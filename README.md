@@ -1,6 +1,6 @@
 # Nano IDE
 Edit and save files with this modern text editor.
-<img src="https://nanomotion.github.io/assets/img/ns.svg" style="max-width: 30%;">
+<img src="https://nanomotion.github.io/assets/img/nslg.svg" style="max-width: 30%;">
 
 ## How to Install
 <b>Method 1</b>
