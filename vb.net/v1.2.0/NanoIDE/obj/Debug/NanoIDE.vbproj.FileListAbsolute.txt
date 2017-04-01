@@ -1,0 +1,15 @@
+c:\users\zspri\documents\visual studio 2017\Projects\NanoIDE\NanoIDE\bin\Debug\NanoIDE.exe.config
+c:\users\zspri\documents\visual studio 2017\Projects\NanoIDE\NanoIDE\bin\Debug\NanoIDE.exe
+c:\users\zspri\documents\visual studio 2017\Projects\NanoIDE\NanoIDE\bin\Debug\NanoIDE.pdb
+c:\users\zspri\documents\visual studio 2017\Projects\NanoIDE\NanoIDE\bin\Debug\NanoIDE.xml
+c:\users\zspri\documents\visual studio 2017\Projects\NanoIDE\NanoIDE\obj\Debug\NanoIDE.vbprojResolveAssemblyReference.cache
+c:\users\zspri\documents\visual studio 2017\Projects\NanoIDE\NanoIDE\obj\Debug\NanoIDE.Resources.resources
+c:\users\zspri\documents\visual studio 2017\Projects\NanoIDE\NanoIDE\obj\Debug\NanoIDE.vbproj.GenerateResource.Cache
+c:\users\zspri\documents\visual studio 2017\Projects\NanoIDE\NanoIDE\obj\Debug\NanoIDE.exe
+c:\users\zspri\documents\visual studio 2017\Projects\NanoIDE\NanoIDE\obj\Debug\NanoIDE.xml
+c:\users\zspri\documents\visual studio 2017\Projects\NanoIDE\NanoIDE\obj\Debug\NanoIDE.pdb
+c:\users\zspri\documents\visual studio 2017\Projects\NanoIDE\NanoIDE\obj\Debug\NanoIDE.ContextMenu1.resources
+c:\users\zspri\documents\visual studio 2017\Projects\NanoIDE\NanoIDE\obj\Debug\NanoIDE.Editor.resources
+c:\users\zspri\documents\visual studio 2017\Projects\NanoIDE\NanoIDE\obj\Debug\NanoIDE.Settings.resources
+c:\users\zspri\documents\visual studio 2017\Projects\NanoIDE\NanoIDE\obj\Debug\NanoIDE.SplashScreen.resources
+C:\Users\zspri\documents\visual studio 2017\Projects\NanoIDE\NanoIDE\obj\Debug\NanoIDE.Customization.resources
