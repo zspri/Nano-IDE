@@ -6,7 +6,7 @@ Edit and save files with this modern text editor.
 ## How to Install
 <b>Method 1</b>
 
-<a href="https://github.com/Nanomotion/Nano-IDE/blob/master/vb.net/v1.1.0/NanoIDE/bin/Debug/NanoIDE.exe?raw=true">Click here</a> to download NanoIDE.
+<a href="https://github.com/Nanomotion/Nano-IDE/blob/master/vb.net/v1.3.0/NanoIDE/bin/Debug/NanoIDE.exe?raw=true">Click here</a> to download NanoIDE.
 
 <b>Method 2</b>
 
