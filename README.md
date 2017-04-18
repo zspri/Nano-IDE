@@ -1,4 +1,6 @@
 # Nano IDE
+> **Note:** I am rewriting this product to use HTML with either Electron or Crosswalk for more versatility and support for MacOS and Linux. (Unless you feel like using Wine...)
+
 Edit and save files with this modern text editor.
 
 <img src="https://nanomotion.github.io/assets/img/ns.svg" width="30%" style="max-width: 30%;">
@@ -17,4 +19,4 @@ Edit and save files with this modern text editor.
 Type `git clone https://github.com/Nanomotion/Nano-IDE.git` into your computer's command line.
 
 <img src="https://img.shields.io/github/forks/Nanomotion/Nano-IDE.svg?style=social&label=Fork"><img src="https://img.shields.io/github/stars/Nanomotion/Nano-IDE.svg?style=social&label=Star"><img src="https://img.shields.io/github/watchers/Nanomotion/Nano-IDE.svg?style=social&label=Watch">
-<img src="https://img.shields.io/badge/latest-v1.2.0-blue.svg"> <img src="https://img.shields.io/badge/build-passing-brightgreen.svg"> <img src="https://img.shields.io/maintenance/yes/2017.svg">
+<img src="https://img.shields.io/badge/latest-v1.3.0-blue.svg"> <img src="https://img.shields.io/badge/build-passing-brightgreen.svg"> <img src="https://img.shields.io/maintenance/yes/2017.svg">
