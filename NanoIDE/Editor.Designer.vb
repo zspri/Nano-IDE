@@ -164,7 +164,6 @@ Partial Class Editor
         Me.Name = "Editor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Nano IDE"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.TopMenu.ResumeLayout(False)
         CType(Me.TopLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BottomBar.ResumeLayout(False)

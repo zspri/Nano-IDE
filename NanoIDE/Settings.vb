@@ -56,13 +56,13 @@ Public Class Settings
             Me.Cursor = Cursors.WaitCursor
             TextArea.ReadOnly = True
             Try
-                FileContent = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "App.config"))
+                FileContent = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "NanoIDE.exe.config"))
                 TextArea.Text = FileContent
-                Me.Text = "app.config - Nano IDE"
-                Editor.Status.Text = "Editing App.config"
+                Me.Text = "Configuration - Nano IDE"
+                Editor.Status.Text = "Editing Configuration"
             Catch ex As Exception
                 MsgBox("An error occurred while trying to open the config file:" & vbCrLf & vbCrLf & ex.ToString, vbCritical)
-                Editor.Status.Text = "Failed to open App.config"
+                Editor.Status.Text = "Failed to open configuration"
             End Try
             TextArea.ReadOnly = False
             Me.Cursor = Cursors.Default

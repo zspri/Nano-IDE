@@ -22,9 +22,13 @@ Edit and save files with this modern text editor.
 
 <b>Method 1</b>
 
-<a href="https://github.com/Nanomotion/Nano-IDE/archive/master.zip">Click here</a> to download a `.zip` file of this repo.
+<a href="https://github.com/Nanomotion/Nano-IDE/tree/master/NanoIDE/bin/Debug/NanoIDE.exe">Click here</a> to download the latest binary (`.exe`) of NanoIDE.
 
 <b>Method 2</b>
+
+<a href="https://github.com/Nanomotion/Nano-IDE/archive/master.zip">Click here</a> to download a `.zip` file of this repo.
+
+<b>Method 3</b>
 
 Type `git clone git+https://github.com/Nanomotion/Nano-IDE.git` into your computer's command line.
 

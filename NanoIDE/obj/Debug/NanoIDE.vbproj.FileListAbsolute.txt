@@ -1,0 +1,14 @@
+C:\Users\zspri\Documents\Git\Nano-IDE\NanoIDE\bin\Debug\NanoIDE.exe.config
+C:\Users\zspri\Documents\Git\Nano-IDE\NanoIDE\bin\Debug\NanoIDE.exe
+C:\Users\zspri\Documents\Git\Nano-IDE\NanoIDE\bin\Debug\NanoIDE.pdb
+C:\Users\zspri\Documents\Git\Nano-IDE\NanoIDE\bin\Debug\NanoIDE.xml
+C:\Users\zspri\Documents\Git\Nano-IDE\NanoIDE\obj\Debug\NanoIDE.vbprojResolveAssemblyReference.cache
+C:\Users\zspri\Documents\Git\Nano-IDE\NanoIDE\obj\Debug\NanoIDE.ContextMenu1.resources
+C:\Users\zspri\Documents\Git\Nano-IDE\NanoIDE\obj\Debug\NanoIDE.Customization.resources
+C:\Users\zspri\Documents\Git\Nano-IDE\NanoIDE\obj\Debug\NanoIDE.Editor.resources
+C:\Users\zspri\Documents\Git\Nano-IDE\NanoIDE\obj\Debug\NanoIDE.Resources.resources
+C:\Users\zspri\Documents\Git\Nano-IDE\NanoIDE\obj\Debug\NanoIDE.Settings.resources
+C:\Users\zspri\Documents\Git\Nano-IDE\NanoIDE\obj\Debug\NanoIDE.vbproj.GenerateResource.Cache
+C:\Users\zspri\Documents\Git\Nano-IDE\NanoIDE\obj\Debug\NanoIDE.exe
+C:\Users\zspri\Documents\Git\Nano-IDE\NanoIDE\obj\Debug\NanoIDE.xml
+C:\Users\zspri\Documents\Git\Nano-IDE\NanoIDE\obj\Debug\NanoIDE.pdb

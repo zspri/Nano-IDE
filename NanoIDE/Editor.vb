@@ -183,9 +183,9 @@ Public Class Editor
         'TextArea.Font = My.Settings.Font
         If My.Settings.UseLightTheme Then
             TextArea.ForeColor = Color.Black
-            TextArea.BackColor = Color.White
+            TextArea.BackColor = Color.FromArgb(234, 234, 236)
             ContextMenuLabel.ForeColor = Color.Black
-            TopMenu.BackColor = Color.FromArgb(234, 234, 236)
+            TopMenu.BackColor = Color.White
             Me.BackColor = Color.FromArgb(234, 234, 236)
         End If
         Status.Text = "Ready"
