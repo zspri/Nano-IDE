@@ -2,7 +2,21 @@
 
 Edit and save files with this modern text editor.
 
-<img src="https://nanomotion.github.io/assets/img/ns.svg" width="30%" style="max-width: 30%;">
+<img src="https://nanomotion.github.io/assets/img/ns.svg" width="150">
+
+## Features
+
+ - Slick, modern UI
+
+<img src="https://nanomotion.github.io/assets/img/nano-ide-1.png" width="200">
+
+ - Light and dark themes
+
+<img src="https://nanomotion.github.io/assets/img/nano-ide-2.png" width="200">
+
+ - Lightweight and configurable
+
+ <img src="https://nanomotion.github.io/assets/img/nano-ide-3.png" width="200">
 
 ## How to Install
 
