@@ -8,15 +8,15 @@ Edit and save files with this modern text editor.
 
  - Slick, modern UI
 
-<img src="https://nanomotion.github.io/assets/img/nano-ide-1.PNG" width="200">
+<img src="https://nanomotion.github.io/assets/img/nano-ide-1.PNG" width="500">
 
  - Light and dark themes
 
-<img src="https://nanomotion.github.io/assets/img/nano-ide-2.PNG" width="200">
+  <img src="https://nanomotion.github.io/assets/img/nano-ide-3.PNG" width="500">
 
  - Lightweight and configurable
 
- <img src="https://nanomotion.github.io/assets/img/nano-ide-3.PNG" width="200">
+ <img src="https://nanomotion.github.io/assets/img/nano-ide-2.PNG" width="500">
 
 ## How to Install
 
