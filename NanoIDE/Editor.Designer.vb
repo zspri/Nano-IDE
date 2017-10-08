@@ -34,10 +34,15 @@ Partial Class Editor
         Me.SaveFileDialog = New System.Windows.Forms.SaveFileDialog()
         Me.TextArea = New System.Windows.Forms.RichTextBox()
         Me.NotifyIcon = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.NotifPanel = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.NotifMenuLabel = New System.Windows.Forms.Label()
+        Me.NotifLabel = New System.Windows.Forms.Label()
         Me.TopMenu.SuspendLayout()
         CType(Me.TopLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BottomBar.SuspendLayout()
         CType(Me.SettingsIcon, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.NotifPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'TopMenu
@@ -149,11 +154,59 @@ Partial Class Editor
         Me.NotifyIcon.Text = "NanoIDE"
         Me.NotifyIcon.Visible = True
         '
+        'NotifPanel
+        '
+        Me.NotifPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.NotifPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(250, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.NotifPanel.Controls.Add(Me.Label1)
+        Me.NotifPanel.Controls.Add(Me.NotifMenuLabel)
+        Me.NotifPanel.Controls.Add(Me.NotifLabel)
+        Me.NotifPanel.Font = New System.Drawing.Font("Segoe UI Semilight", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NotifPanel.Location = New System.Drawing.Point(0, -1)
+        Me.NotifPanel.Name = "NotifPanel"
+        Me.NotifPanel.Size = New System.Drawing.Size(921, 56)
+        Me.NotifPanel.TabIndex = 11
+        '
+        'Label1
+        '
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semilight", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(859, -3)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(54, 57)
+        Me.Label1.TabIndex = 12
+        Me.Label1.Text = "×"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'NotifMenuLabel
+        '
+        Me.NotifMenuLabel.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NotifMenuLabel.ForeColor = System.Drawing.Color.White
+        Me.NotifMenuLabel.Location = New System.Drawing.Point(3, 0)
+        Me.NotifMenuLabel.Name = "NotifMenuLabel"
+        Me.NotifMenuLabel.Size = New System.Drawing.Size(54, 54)
+        Me.NotifMenuLabel.TabIndex = 5
+        Me.NotifMenuLabel.Text = "☰"
+        Me.NotifMenuLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'NotifLabel
+        '
+        Me.NotifLabel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.NotifLabel.Location = New System.Drawing.Point(3, 4)
+        Me.NotifLabel.Name = "NotifLabel"
+        Me.NotifLabel.Size = New System.Drawing.Size(915, 50)
+        Me.NotifLabel.TabIndex = 11
+        Me.NotifLabel.Text = "Loading... Please wait"
+        Me.NotifLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Editor
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(913, 600)
+        Me.Controls.Add(Me.NotifPanel)
         Me.Controls.Add(Me.TextArea)
         Me.Controls.Add(Me.BottomBar)
         Me.Controls.Add(Me.TopMenu)
@@ -168,6 +221,7 @@ Partial Class Editor
         CType(Me.TopLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BottomBar.ResumeLayout(False)
         CType(Me.SettingsIcon, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.NotifPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -181,4 +235,8 @@ Partial Class Editor
     Friend WithEvents SettingsIcon As PictureBox
     Friend WithEvents TextArea As RichTextBox
     Friend WithEvents NotifyIcon As NotifyIcon
+    Friend WithEvents NotifPanel As Panel
+    Friend WithEvents NotifLabel As Label
+    Friend WithEvents NotifMenuLabel As Label
+    Friend WithEvents Label1 As Label
 End Class

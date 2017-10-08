@@ -16,6 +16,8 @@ Public Class Settings
             TextArea.BackColor = Color.FromArgb(234, 234, 236)
             TextArea.ForeColor = Color.Black
         End If
+        CheckBox2.Checked = My.Settings.ShowUpdateNotifs
+        CheckBox3.Checked = My.Settings.CheckUpdatesOnLaunch
         loaded = True
     End Sub
 
@@ -66,6 +68,29 @@ Public Class Settings
             End Try
             TextArea.ReadOnly = False
             Me.Cursor = Cursors.Default
+        End If
+    End Sub
+
+    Private Sub ShowUpdateNotifs(sender As Object, e As EventArgs) Handles CheckBox2.CheckedChanged
+        If loaded Then
+            My.Settings.ShowUpdateNotifs = CheckBox2.Checked
+            NotifPanel.Show()
+        End If
+    End Sub
+
+    Private Sub CheckForUpdates(sender As Object, e As EventArgs) Handles Button3.Click
+        Try
+            Process.Start(Path.Combine(Directory.GetCurrentDirectory(), "update.exe"))
+            Editor.Close()
+        Catch ex As Exception
+            MsgBox("The update program is either not supported in this release or is corrupt", vbCritical)
+        End Try
+    End Sub
+
+    Private Sub CheckUpdatesOnLaunch(sender As Object, e As EventArgs) Handles CheckBox3.CheckedChanged
+        If loaded Then
+            My.Settings.CheckUpdatesOnLaunch = CheckBox3.Checked
+            NotifPanel.Show()
         End If
     End Sub
 End Class

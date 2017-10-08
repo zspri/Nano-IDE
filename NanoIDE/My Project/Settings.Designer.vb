@@ -77,6 +77,30 @@ Namespace My
                 Me("UseLightTheme") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property ShowUpdateNotifs() As Boolean
+            Get
+                Return CType(Me("ShowUpdateNotifs"),Boolean)
+            End Get
+            Set
+                Me("ShowUpdateNotifs") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property CheckUpdatesOnLaunch() As Boolean
+            Get
+                Return CType(Me("CheckUpdatesOnLaunch"),Boolean)
+            End Get
+            Set
+                Me("CheckUpdatesOnLaunch") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

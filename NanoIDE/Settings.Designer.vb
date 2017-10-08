@@ -35,6 +35,13 @@ Partial Class Settings
         Me.NotifPanel = New System.Windows.Forms.Panel()
         Me.RestartLabel = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.NotifPanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -82,7 +89,7 @@ Partial Class Settings
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 549)
+        Me.Label2.Location = New System.Drawing.Point(12, 743)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(241, 49)
         Me.Label2.TabIndex = 4
@@ -190,11 +197,110 @@ Partial Class Settings
         Me.Button2.Text = "Open Config File" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'Label6
+        '
+        Me.Label6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semilight", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(14, 513)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(660, 43)
+        Me.Label6.TabIndex = 12
+        Me.Label6.Text = "Updates"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label7
+        '
+        Me.Label7.Location = New System.Drawing.Point(259, 576)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(245, 30)
+        Me.Label7.TabIndex = 14
+        Me.Label7.Text = "Show Update Notifications"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.Appearance = System.Windows.Forms.Appearance.Button
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(75, Byte), Integer))
+        Me.CheckBox2.Checked = True
+        Me.CheckBox2.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox2.FlatAppearance.BorderSize = 0
+        Me.CheckBox2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.CheckBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CheckBox2.Font = New System.Drawing.Font("Quicksand Book", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox2.Location = New System.Drawing.Point(224, 577)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(29, 29)
+        Me.CheckBox2.TabIndex = 13
+        Me.CheckBox2.Text = "  "
+        Me.CheckBox2.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(224, 709)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(236, 37)
+        Me.Button3.TabIndex = 15
+        Me.Button3.Text = "Check For Updates"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Label9
+        '
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semilight", 8.5!)
+        Me.Label9.ForeColor = System.Drawing.Color.LightGray
+        Me.Label9.Location = New System.Drawing.Point(220, 657)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(284, 43)
+        Me.Label9.TabIndex = 18
+        Me.Label9.Text = "This setting may trigger a false positive in your antivirus program."
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.Appearance = System.Windows.Forms.Appearance.Button
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(75, Byte), Integer))
+        Me.CheckBox3.Checked = True
+        Me.CheckBox3.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox3.FlatAppearance.BorderSize = 0
+        Me.CheckBox3.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.CheckBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CheckBox3.Font = New System.Drawing.Font("Quicksand Book", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox3.Location = New System.Drawing.Point(224, 620)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(29, 29)
+        Me.CheckBox3.TabIndex = 16
+        Me.CheckBox3.Text = "  "
+        Me.CheckBox3.UseVisualStyleBackColor = False
+        '
+        'Label8
+        '
+        Me.Label8.Location = New System.Drawing.Point(259, 619)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(245, 30)
+        Me.Label8.TabIndex = 17
+        Me.Label8.Text = "Check for Updates on Launch"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'Settings
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(684, 607)
+        Me.ClientSize = New System.Drawing.Size(684, 801)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.CheckBox3)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.CheckBox2)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.NotifPanel)
         Me.Controls.Add(Me.TextArea)
@@ -231,4 +337,11 @@ Partial Class Settings
     Friend WithEvents NotifPanel As Panel
     Friend WithEvents RestartLabel As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Label9 As Label
+    Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents Label8 As Label
 End Class

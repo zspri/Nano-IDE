@@ -1,4 +1,6 @@
 ﻿Imports System.IO
+Imports System.Net
+Imports Newtonsoft.Json
 
 Public Class Editor
     Dim FileContent
@@ -6,6 +8,7 @@ Public Class Editor
     Dim CurrentLine = 1
     Dim SelectionIndex = 0
     Dim CurrentCol = 0
+    Dim UpdateError As Exception = Nothing
 
     Public Function HandleKeyEvent(e As KeyEventArgs)
         If e.KeyCode = Keys.A And My.Computer.Keyboard.CtrlKeyDown Then ' Select All
@@ -76,7 +79,7 @@ Public Class Editor
         Return 0
     End Function
 
-    Private Sub ContextMenuLabel_Click(sender As Object, e As EventArgs) Handles ContextMenuLabel.Click
+    Private Sub ContextMenuRequest(sender As Object, e As EventArgs) Handles ContextMenuLabel.Click, NotifMenuLabel.Click
         ContextMenu1.Show()
         ContextMenu1.Location = New Point(MousePosition.X - 2, MousePosition.Y - 2)
         ContextMenu1.BringToFront()
@@ -180,13 +183,44 @@ Public Class Editor
     End Sub
 
     Private Sub Editor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TextArea.Font = My.Settings.Font
+        ' Check for updates and render theme
+        NotifPanel.Hide()
+        Me.Show()
+        Application.DoEvents()
+        If My.Settings.CheckUpdatesOnLaunch Then
+            Try
+                Dim Client As WebClient = New WebClient()
+                Client.Headers.Add("User-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2;)")
+                Dim CheckReleases As String = Client.DownloadString("https://api.github.com/repos/Nanomotion/Nano-IDE/releases?per_page=1")
+                Dim ReleaseObj = JsonConvert.DeserializeObject(Of List(Of Release))(CheckReleases)
+                Dim LatestRelease = ReleaseObj.First()
+                If Not ("v" + My.Application.Info.Version.ToString).StartsWith(LatestRelease.tag_name) Then
+                    If My.Settings.ShowUpdateNotifs Then
+                        NotifPanel.BackColor = Color.FromArgb(67, 181, 129)
+                        NotifLabel.Text = "A new update for NanoIDE is available"
+                        AddHandler NotifLabel.Click, AddressOf UpdateNoticeClick
+                        NotifPanel.Show()
+                    End If
+                    Debug.Print("A new update is available")
+                End If
+            Catch ex As Exception
+                If My.Settings.ShowUpdateNotifs Then
+                    NotifPanel.BackColor = Color.FromArgb(240, 71, 71)
+                    NotifLabel.Text = "Failed to check for updates"
+                    UpdateError = ex
+                    AddHandler NotifLabel.Click, AddressOf UpdateCheckFailed
+                    NotifPanel.Show()
+                End If
+                Debug.Print(ex.ToString)
+
+            End Try
+        End If
         If My.Settings.UseLightTheme Then
             TextArea.ForeColor = Color.Black
             TextArea.BackColor = Color.FromArgb(234, 234, 236)
             ContextMenuLabel.ForeColor = Color.Black
             TopMenu.BackColor = Color.White
-            Me.BackColor = Color.FromArgb(234, 234, 236)
+            Me.BackColor = Color.White
         End If
         Status.Text = "Ready"
     End Sub
@@ -198,4 +232,63 @@ Public Class Editor
     Private Sub SettingsIcon_Click(sender As Object, e As EventArgs) Handles SettingsIcon.Click
         Settings.Show()
     End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        NotifPanel.Hide()
+        NotifPanel.BackColor = Color.FromArgb(250, 166, 26)
+    End Sub
+
+    Private Sub UpdateNoticeClick(sender As Object, e As EventArgs)
+        Process.Start("https://github.com/Nanomotion/Nano-IDE/releases")
+        NotifPanel.Hide()
+        RemoveHandler NotifLabel.Click, AddressOf UpdateNoticeClick
+    End Sub
+
+    Private Sub UpdateCheckFailed(sender As Object, e As EventArgs)
+        NotifPanel.Hide()
+        MsgBox("An error occurred while trying to check for updates:" & vbCrLf & vbCrLf &
+               UpdateError.ToString & vbCrLf & vbCrLf &
+               "This feature can be optionally disabled in Settings under the Updates section.")
+        RemoveHandler NotifLabel.Click, AddressOf UpdateCheckFailed
+    End Sub
+End Class
+
+Public Class Author
+    Public Property login As String
+    Public Property id As Integer
+    Public Property avatar_url As String
+    Public Property gravatar_id As String
+    Public Property url As String
+    Public Property html_url As String
+    Public Property followers_url As String
+    Public Property following_url As String
+    Public Property gists_url As String
+    Public Property starred_url As String
+    Public Property subscriptions_url As String
+    Public Property organizations_url As String
+    Public Property repos_url As String
+    Public Property events_url As String
+    Public Property received_events_url As String
+    Public Property type As String
+    Public Property site_admin As Boolean
+End Class
+
+Public Class Release
+    Public Property url As String
+    Public Property assets_url As String
+    Public Property upload_url As String
+    Public Property html_url As String
+    Public Property id As Integer
+    Public Property tag_name As String
+    Public Property target_commitish As String
+    Public Property name As String
+    Public Property draft As Boolean
+    Public Property author As Author
+    Public Property prerelease As Boolean
+    Public Property created_at As DateTime
+    Public Property published_at As DateTime
+    Public Property assets As Object()
+    Public Property tarball_url As String
+    Public Property zipball_url As String
+    Public Property body As String
 End Class
