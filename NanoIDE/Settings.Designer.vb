@@ -89,11 +89,11 @@ Partial Class Settings
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 743)
+        Me.Label2.Location = New System.Drawing.Point(12, 763)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(241, 49)
+        Me.Label2.Size = New System.Drawing.Size(241, 58)
         Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Nano IDE v2.0.0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Copyright (C) 2017 Nanomotion"
+        Me.Label2.Text = "Nano IDE {Version}" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Copyright (C) 2017 Nanomotion" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Click to view license"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'CheckBox1
@@ -293,7 +293,7 @@ Partial Class Settings
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(684, 801)
+        Me.ClientSize = New System.Drawing.Size(684, 830)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.CheckBox3)

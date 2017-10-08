@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports System.Net
 
 Public Class Settings
 
@@ -7,7 +8,7 @@ Public Class Settings
     Dim FileContent
 
     Private Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Label2.Text = "Nano IDE v" & My.Application.Info.Version.ToString & vbCrLf & My.Application.Info.Copyright
+        Label2.Text = "Nano IDE v" & My.Application.Info.Version.ToString & vbCrLf & My.Application.Info.Copyright & vbCrLf & "Click to view license"
         NotifPanel.Hide()
         If My.Settings.UseLightTheme Then
             CheckBox1.Checked = True
@@ -92,5 +93,17 @@ Public Class Settings
             My.Settings.CheckUpdatesOnLaunch = CheckBox3.Checked
             NotifPanel.Show()
         End If
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        TextWindow.Show()
+        Try
+            Dim Client As WebClient = New WebClient()
+            Client.Headers.Add("User-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2;)")
+            Dim LicenseTxt As String = Client.DownloadString("https://raw.githubusercontent.com/Nanomotion/Nano-IDE/master/LICENSE.txt")
+            TextWindow.SetText(LicenseTxt)
+        Catch ex As Exception
+            TextWindow.SetText("Failed to fetch license info:" & vbCrLf & vbCrLf & ex.ToString)
+        End Try
     End Sub
 End Class

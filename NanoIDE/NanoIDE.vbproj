@@ -139,6 +139,12 @@
     <Compile Include="Settings.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TextWindow.Designer.vb">
+      <DependentUpon>TextWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TextWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ContextMenu1.resx">
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextWindow.resx">
+      <DependentUpon>TextWindow.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

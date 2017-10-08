@@ -142,7 +142,7 @@ Partial Class Editor
         Me.TextArea.HideSelection = False
         Me.TextArea.Location = New System.Drawing.Point(0, 56)
         Me.TextArea.Name = "TextArea"
-        Me.TextArea.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical
+        Me.TextArea.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
         Me.TextArea.Size = New System.Drawing.Size(913, 515)
         Me.TextArea.TabIndex = 6
         Me.TextArea.TabStop = False
