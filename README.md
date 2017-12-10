@@ -33,4 +33,4 @@ Edit and save files with this modern text editor.
 Type `git clone git+https://github.com/Nanomotion/Nano-IDE.git` into your computer's command line.
 
 <img src="https://img.shields.io/github/forks/Nanomotion/Nano-IDE.svg?style=social&label=Fork"><img src="https://img.shields.io/github/stars/Nanomotion/Nano-IDE.svg?style=social&label=Star"><img src="https://img.shields.io/github/watchers/Nanomotion/Nano-IDE.svg?style=social&label=Watch">
-<img src="https://img.shields.io/badge/latest-v2.0.0-blue.svg"> <img src="https://img.shields.io/badge/build-passing-brightgreen.svg"> <img src="https://img.shields.io/maintenance/yes/2017.svg">
+<img src="https://img.shields.io/badge/latest-v2.1.1-blue.svg"> <img src="https://img.shields.io/badge/build-passing-brightgreen.svg"> <img src="https://img.shields.io/maintenance/yes/2017.svg">
