@@ -100,7 +100,7 @@
             My.Forms.Editor.WindowState = FormWindowState.Maximized
         Else
             My.Forms.Editor.FormBorderStyle = FormBorderStyle.Sizable
-            My.Forms.Editor.WindowState = FormWindowState.Normal
+            My.Forms.Editor.WindowState = FormWindowState.Maximized
         End If
         Me.Close()
     End Sub
@@ -116,5 +116,13 @@
 
     Private Sub ContextMenu1_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
         Editor.HandleKeyEvent(e)
+    End Sub
+
+    Private Sub Label12_Click(sender As Object, e As EventArgs) Handles Label12.Click, Label11.Click
+        Editor.TextArea.Redo()
+    End Sub
+
+    Private Sub Label14_Click(sender As Object, e As EventArgs) Handles Label14.Click, Label13.Click
+        Editor.TextArea.Undo()
     End Sub
 End Class

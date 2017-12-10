@@ -61,13 +61,11 @@ Partial Class Settings
         'FontDialog
         '
         Me.FontDialog.AllowVerticalFonts = False
-        Me.FontDialog.Font = New System.Drawing.Font("Consolas", 12.0!)
+        Me.FontDialog.Font = New System.Drawing.Font("Menlo", 9.0!)
         Me.FontDialog.FontMustExist = True
         Me.FontDialog.MaxSize = 32
         Me.FontDialog.MinSize = 5
-        Me.FontDialog.ScriptsOnly = True
         Me.FontDialog.ShowApply = True
-        Me.FontDialog.ShowColor = True
         Me.FontDialog.ShowEffects = False
         '
         'Button1

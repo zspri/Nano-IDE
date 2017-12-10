@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="Font" Type="System.Drawing.Font" Scope="User">
-      <Value Profile="(Default)">Consolas, 12pt</Value>
+      <Value Profile="(Default)">Menlo, 9pt</Value>
     </Setting>
     <Setting Name="UseLightTheme" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>

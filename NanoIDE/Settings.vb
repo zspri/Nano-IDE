@@ -19,11 +19,12 @@ Public Class Settings
         End If
         CheckBox2.Checked = My.Settings.ShowUpdateNotifs
         CheckBox3.Checked = My.Settings.CheckUpdatesOnLaunch
+        TextArea.Font = My.Settings.Font
         loaded = True
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        MsgBox("This feature isn't available yet!", MsgBoxStyle.Critical)
+        FontDialog.ShowDialog()
     End Sub
 
     Private Sub TextArea_TextChanged(sender As Object, e As EventArgs) Handles TextArea.TextChanged
@@ -55,17 +56,14 @@ Public Class Settings
             If DialogBoxResult = 6 Then
                 Editor.SaveFileDialog.ShowDialog()
             End If
-            Editor.Status.Text = "Opening App.config..."
             Me.Cursor = Cursors.WaitCursor
             TextArea.ReadOnly = True
             Try
                 FileContent = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "NanoIDE.exe.config"))
                 TextArea.Text = FileContent
                 Me.Text = "Configuration - Nano IDE"
-                Editor.Status.Text = "Editing Configuration"
             Catch ex As Exception
                 MsgBox("An error occurred while trying to open the config file:" & vbCrLf & vbCrLf & ex.ToString, vbCritical)
-                Editor.Status.Text = "Failed to open configuration"
             End Try
             TextArea.ReadOnly = False
             Me.Cursor = Cursors.Default
@@ -80,12 +78,7 @@ Public Class Settings
     End Sub
 
     Private Sub CheckForUpdates(sender As Object, e As EventArgs) Handles Button3.Click
-        Try
-            Process.Start(Path.Combine(Directory.GetCurrentDirectory(), "update.exe"))
-            Editor.Close()
-        Catch ex As Exception
-            MsgBox("The update program is either not supported in this release or is corrupt", vbCritical)
-        End Try
+        My.Forms.Update.Show()
     End Sub
 
     Private Sub CheckUpdatesOnLaunch(sender As Object, e As EventArgs) Handles CheckBox3.CheckedChanged
@@ -105,5 +98,11 @@ Public Class Settings
         Catch ex As Exception
             TextWindow.SetText("Failed to fetch license info:" & vbCrLf & vbCrLf & ex.ToString)
         End Try
+    End Sub
+
+    Private Sub FontDialog_Apply(sender As Object, e As EventArgs) Handles FontDialog.Apply
+        My.Settings.Font = FontDialog.Font
+        TextArea.Font = My.Settings.Font
+        NotifPanel.Show()
     End Sub
 End Class
